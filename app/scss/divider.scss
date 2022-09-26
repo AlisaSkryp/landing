@@ -1,0 +1,42 @@
+.divider{
+
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  width: 100%;
+
+  &__wrapper{
+    max-width: 85rem;
+    margin: 0 auto;
+    max-height: 4.75rem;
+
+    padding: 0.75rem 1.5rem;
+
+  }
+
+  &__svg{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+
+  p{
+    margin-left: 0.9rem;
+    font-size:1rem;
+    font-weight:500;
+
+
+    @include breakpoint-up(large) {
+      font-size:1.37rem;
+
+
+    }
+  }
+  }
+
+&__cta-buy{
+    background-color: #17BA5F;
+    color: #fff;
+    border: 1px solid #17BA5F;
+    padding-left:3rem;
+    padding-right:3rem;
+  }
+}

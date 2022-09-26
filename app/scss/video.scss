@@ -1,0 +1,106 @@
+.video{
+  background-color: #F9F9F9;
+  width: 100%;
+
+
+  @include breakpoint-up(large) {
+    margin-top:5.825rem;
+
+  }
+
+  &__wrapper{
+    flex-direction: column;
+
+  }
+  &__navigation{
+    width: 100%;
+    border-bottom: 3px solid #DADEE6;
+    display: flex;
+    padding-bottom: 20px;
+
+
+    a{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      color: #000000;
+
+      &:not(:last-child){
+        margin-right: 2.5rem;
+
+      }
+   svg{
+     margin-right: 0.65rem;
+   }
+      &::after{
+        position: absolute;
+        content: "";
+        display: block;
+        height:3px;
+        left: 0;
+        right:0;
+        bottom: -20px;
+
+      }
+
+      &:hover{
+        color: #3D3D3D;
+
+        &::after{
+          background: #0071CE;;
+
+        }
+      }
+    }
+  }
+&__block{
+
+  @include breakpoint-up(large) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.125rem;
+  }
+}
+  &__title{
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size:1.3rem;
+    line-height: 124%;
+    margin-bottom: 1.2rem;
+
+    @include breakpoint-up(large) {
+      font-size:1.625rem;
+    }
+  }
+  &__descr{
+    font-family:'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.75rem;
+    font-size:0.8rem; //$smallText;
+    margin-bottom: 0.9rem;
+
+    @include breakpoint-up(large) {
+      font-size:$smallText;
+    }
+  }
+&__format{
+  @include breakpoint-up(large) {
+    margin-left:5.625rem;
+  }
+
+  img{
+    width: 100%;
+
+    @include breakpoint-up(large) {
+      width:unset;
+    }
+  }
+}
+
+}
+
+h3{
+  @include breakpoint-up(large) {
+margin-top: 5.8rem  }
+}

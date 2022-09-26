@@ -1,0 +1,105 @@
+
+
+.hero{
+  background-color: $dark;
+  padding-bottom: 6.125rem;
+  text-align: center;
+
+
+  @include breakpoint-up(large) {
+    min-height: 25rem;
+    display: flex;
+    text-align: left;
+  }
+
+  &__image{
+    background-image:url("images/Graphica_bg.png");
+    background-repeat:no-repeat;
+    min-height:16.96rem;
+    background-position: center center;
+
+
+    @include breakpoint-up(large){
+      flex: 1;
+      order: 2;
+    }
+  }
+
+  &__text {
+    @include breakpoint-up(large){
+      padding-top: 5rem;
+      flex: 1;
+      order: 1;
+    }
+  }
+
+    &__pretitle{
+      color: $hero;
+      font-family: 'Fira Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.375rem;
+      line-height: 32px;
+    }
+    &__title{
+      position: relative;
+    }
+    &__title {
+      span{
+        color: #fafff1;
+        font-family: 'Fira Sans', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.875rem;
+        line-height: 96%;
+      }
+
+    }
+    &__title {
+
+
+        color: #fafff1;
+        font-family: 'Fira Sans', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.875rem;
+        line-height: 96%;
+        margin: 0
+
+    }
+
+  &__after-title{
+    color: #fafff1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height:163.4%;
+    margin-bottom:1.75rem;
+
+  }
+
+  &__cta-download{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    background-color: #0071CE;
+    border:1px solid #0071CE;
+    margin-right:1.25rem;
+  }
+  &__cta-download:hover {
+    background-color: white;
+    color:#0071CE;
+    border:1px solid white;
+
+  }
+  &__cta-buy{
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    padding-left:3rem;
+    padding-right:3rem;
+
+  }
+  &__cta-buy:hover{
+    background-color: white;
+    color:$dark;
+  }
+
+}

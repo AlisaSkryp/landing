@@ -1,0 +1,131 @@
+html{
+  font-size:100%;
+  font-family:$main;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  &.no-scroll{
+    overflow: hidden;
+  }
+}
+p{
+  margin: unset;
+}
+
+h3{
+  font-family: 'Fira Sans',sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $bigText;
+  line-height: 50px;
+}
+a, a:visited , a:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+li{
+  list-style: none;
+}
+
+//Spacing
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 85rem;
+  padding-left:1.5rem ;//15.937rem- side of container
+  padding-right:1.5rem ;//15.937rem- side of container
+
+
+  @include breakpoint-up(large) {
+    min-height: 25rem;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+
+  }
+}
+.container{
+  max-width: 85rem;
+  margin: 0 auto;
+  padding-left:1.5rem ;//15.937rem- side of container
+  padding-right:1.5rem ;//15.937rem- side of container
+
+
+  &--pall{
+  padding: 2.25rem 1.5rem;
+
+}
+&--pt{
+  padding-top:2.25rem;
+}
+&--pr{
+  padding-right:1.5rem;
+}
+
+&--pb{
+  padding-bottom:2.25rem;
+}
+&--pl{
+  padding-left:1.5rem;
+}
+&--py{
+  padding-top:2.25rem;
+  padding-bottom:2.25rem;
+
+}
+&--px{
+  padding-left:1.5rem;
+  padding-right:1.5rem;
+
+}
+}
+//Flexbox
+.flex{
+  display: flex;
+
+  &-jc-sb{
+    justify-content: space-between;
+  }
+&-jc-c{
+  justify-content: center;
+}
+  &-ai-c{
+    align-items: center;
+  }
+}
+button, .button {
+  padding-top:1rem;
+  padding-bottom:1rem;
+
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Fira Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing:0.08em
+}
+
+//Visibility
+
+.hide-for-mobile{
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+.hide-for-desktop{
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
